@@ -11,43 +11,60 @@
         <!-- Seção de Início -->
         <div id="inicio" class="secao ativa">
             <div class="header">
-                <h1>🚀 Mentor de Carreiras</h1>
-                <p>Descubra a carreira perfeita para você</p>
+                <h1 class="titulo-principal">🚀 Mentor de Carreiras</h1>
+                <p class="subtitulo">Descubra qual carreira combina melhor com você</p>
             </div>
             
             <div class="intro-content">
-                <h2>Bem-vindo!</h2>
-                <p>Este questionário foi desenvolvido para ajudá-lo a descobrir qual carreira melhor se alinha com seus interesses, habilidades e valores.</p>
-                
-                <div class="info-box">
-                    <h3>Como funciona:</h3>
-                    <ul>
-                        <li>✓ Responda 10 perguntas sobre seus interesses e preferências</li>
-                        <li>✓ Cada resposta é analisada para encontrar as melhores opções</li>
-                        <li>✓ Receba recomendações personalizadas de carreiras</li>
-                        <li>✓ Conheça a descrição detalhada de cada profissão</li>
-                    </ul>
+                <div class="card-intro">
+                    <h2>Bem-vindo ao seu futuro!</h2>
+                    <p>Não sabe qual carreira seguir? Este questionário inteligente foi desenvolvido para ajudá-lo a descobrir qual caminho profissional melhor se alinha com seus interesses, habilidades, valores e personalidade.</p>
+                    
+                    <div class="info-box">
+                        <div class="info-item">
+                            <span class="icon">✓</span>
+                            <span>Responda 15 perguntas sobre seus interesses e preferências</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="icon">✓</span>
+                            <span>Análise personalizada baseada em suas respostas</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="icon">✓</span>
+                            <span>Recomendações de carreiras com descrições detalhadas</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="icon">✓</span>
+                            <span>Compatibilidade percentual com cada profissão</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-grande" onclick="iniciarQuestionario()">
+                        🎯 Começar Agora
+                    </button>
                 </div>
-                
-                <button class="btn btn-primary" onclick="iniciarQuestionario()">Começar o Questionário</button>
             </div>
         </div>
 
         <!-- Seção de Questionário -->
         <div id="questionario" class="secao">
-            <div class="progress-bar">
-                <div id="progress" class="progress"></div>
-            </div>
-            <p class="progress-text"><span id="pergunta-atual">1</span> de 10</p>
-            
-            <div id="pergunta-container" class="pergunta-container">
-                <h2 id="pergunta-titulo"></h2>
-                <div id="opcoes-container" class="opcoes-container"></div>
-            </div>
-            
-            <div class="navigation-buttons">
-                <button class="btn btn-secondary" onclick="voltarPergunta()" style="display:none;" id="btn-voltar">← Voltar</button>
-                <button class="btn btn-primary" onclick="proximaPergunta()" id="btn-proximo">Próximo →</button>
+            <div class="quiz-container">
+                <div class="progress-section">
+                    <div class="progress-bar">
+                        <div id="progress" class="progress"></div>
+                    </div>
+                    <p class="progress-text">Pergunta <span id="pergunta-atual">1</span> de 15</p>
+                </div>
+                
+                <div class="pergunta-box">
+                    <h2 id="pergunta-titulo"></h2>
+                    <div id="opcoes-container" class="opcoes-container"></div>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button class="btn btn-secondary" onclick="voltarPergunta()" id="btn-voltar" style="display:none;">← Voltar</button>
+                    <button class="btn btn-primary" onclick="proximaPergunta()" id="btn-proximo">Próximo →</button>
+                </div>
             </div>
         </div>
 
@@ -61,8 +78,7 @@
             <div id="resultados-container" class="resultados-container"></div>
             
             <div class="buttons-resultado">
-                <button class="btn btn-secondary" onclick="reiniciarQuestionario()">← Fazer Novamente</button>
-                <button class="btn btn-secondary" onclick="compartilharResultados()">📤 Compartilhar</button>
+                <button class="btn btn-secondary btn-grande" onclick="reiniciarQuestionario()">🔄 Fazer Novamente</button>
             </div>
         </div>
     </div>
